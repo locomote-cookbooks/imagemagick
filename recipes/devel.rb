@@ -20,7 +20,7 @@
 include_recipe "imagemagick"
 
 dev_pkg = value_for_platform(
-  ["redhat", "centos", "fedora"] => { "default" => "ImageMagick-devel" },
+  %w(redhat centos amazon fedora) => { "default" => "ImageMagick-devel" },
   "debian" => { "default" => "libmagickwand-dev" },
   "ubuntu" => {
     "8.04" => "libmagick9-dev",
